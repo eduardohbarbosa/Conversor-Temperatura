@@ -16,7 +16,7 @@ var resKelvin = document.querySelector("#resKelvin")
 //Atualiza a div de acordo com os radios selecionados
 function atualizar(){
     if(radioCelsius.checked){
-        inputCelsius.style.display = "initial";
+        /*inputCelsius.style.display = "initial";
         inputFahrenheit.style.display = "none";
         inputKelvin.style.display = "none";
 
@@ -25,7 +25,9 @@ function atualizar(){
 
         resCelsius.innerHTML = '°C'
         resFahrenheit.innerHTML = '°F'
-        resKelvin.innerHTML = '°K'
+        resKelvin.innerHTML = '°K'*/
+        
+
     }else if(radioFahrenheit.checked){
         inputFahrenheit.style.display = "initial";
         inputCelsius.style.display = "none";
@@ -52,7 +54,7 @@ function atualizar(){
 }
 
 
-function converter(){
+/*function converter(){
     if (radioCelsius.checked){
         var c = Number(inputCelsius.value)
         var f = (c * 9/5) + 32
@@ -68,4 +70,4 @@ function converter(){
     }else if(radioCelsius.checked){
         var k = Number(inputKelvin.Value)
     }
-}
+}*/
