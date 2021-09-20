@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body{
+    background-color: dodgerblue;
+}
+
+section{
+
+    width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.507);
+    border-radius: 20px;
+}
+
+div{
+    display: inline-flex;
+    margin: auto;
+}
+
+input{
+    width: 70px;
+    height: 20px;
+    margin: 30px 5px 0px 5px;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+i{
+    font-size: 4em;
+    margin: 5px;
+}
+
+p{
+    margin-right: 50px;
+    font-size: 2em;
+}
+
+button{
+    background-color: deepskyblue;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.185);
+    padding: 10px;
+    font-weight: bold;
+}
+
+#radioCelsius, #radioFahrenheit, #radioKelvin{
+    width: 40px;
+    margin: 10px;
+}

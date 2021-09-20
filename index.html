@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/600c5d63d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section>
+        <h1>Conversor de Temperatura</h1>
+        <input type="radio" name="temperatura" id="radioCelsius" value="celsius" onclick="atualizar()">
+        <label for="radioCelsius">Celsius</label>
+        <input type="radio" name="temperatura" id="radioFahrenheit" value="fahrenheit" onclick="atualizar()">
+        <label for="radioFahrenheit">Fahrenheit</label>
+        <input type="radio" name="temperatura" id="radioKelvin" value="kelvin" onclick="atualizar()">
+        <label for="radioKelvin">kelvin</label>
+
+        <div>
+            <i class="fas fa-thermometer-three-quarters"></i>
+            <input type="number" id="celsius">
+            <p>°C</p>
+            <i class="fas fa-thermometer-three-quarters"></i>
+            <input type="number" id="fahrenheit">
+            <p>°F</p>
+            <i class="fas fa-thermometer-three-quarters"></i>
+            <input type="number" id="kelvin">
+            <p>°K</p>
+        </div>
+<br>
+        <button onclick="converter()">Converter</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
