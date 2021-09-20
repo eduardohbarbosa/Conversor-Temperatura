@@ -6,7 +6,7 @@ body{
 
 section{
 
-    width: 600px;
+    width: 900px;
     margin: 100px auto;
     padding: 20px;
     text-align: center;
@@ -16,10 +16,13 @@ section{
 
 div{
     display: inline-flex;
+    width: 600px;
     margin: auto;
+    text-align: center;
 }
 
 input{
+    display: none;
     width: 70px;
     height: 20px;
     margin: 30px 5px 0px 5px;
@@ -35,7 +38,7 @@ i{
 
 p{
     margin-right: 50px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 button{
@@ -47,6 +50,7 @@ button{
 }
 
 #radioCelsius, #radioFahrenheit, #radioKelvin{
+    display: initial;
     width: 40px;
     margin: 10px;
 }
