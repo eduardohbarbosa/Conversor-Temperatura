@@ -12,26 +12,16 @@
 
     <section>
         <h1>Conversor de Temperatura</h1>
-        <input type="radio" name="temperatura" id="radioCelsius" value="celsius" onclick="atualizar()">
-        <label for="radioCelsius">Celsius</label>
-        <input type="radio" name="temperatura" id="radioFahrenheit" value="fahrenheit" onclick="atualizar()">
-        <label for="radioFahrenheit">Fahrenheit</label>
-        <input type="radio" name="temperatura" id="radioKelvin" value="kelvin" onclick="atualizar()">
-        <label for="radioKelvin">kelvin</label>
+        <input type="radio" name="conversor" id="conversorCelsius" checked onclick="conversor()" >Celsius
+        <input type="radio" name="conversor" id="conversorFahrenheit" onclick="conversor()">Fahrenheit
+        <input type="radio" name="conversor" id="conversorKelvin" onclick="conversor()">kelvin
 
-        <div>
-            <i class="fas fa-thermometer-three-quarters"></i>
-            <input type="number" id="celsius">
-            <p id="resCelsius">°C</p>
-            <i class="fas fa-thermometer-three-quarters"></i>
-            <input type="number" id="fahrenheit">
-            <p id="resFahrenheit">°F</p>
-            <i class="fas fa-thermometer-three-quarters"></i>
-            <input type="number" id="kelvin">
-            <p id="resKelvin">°K</p>
+        <div id="temperaturas">
+            <div id="celsius"> </div>
+            <div id="fahrenheit"></div>
+            <div id="kelvin"></div>
+            <button onclick="converter()">Converter</button>
         </div>
-<br>
-        <button onclick="converter()">Converter</button>
     </section>
 
     <script src="script.js"></script>

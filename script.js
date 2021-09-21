@@ -1,73 +1,52 @@
-//Radios button
-var radioCelsius = document.querySelector("#radioCelsius")
-var radioFahrenheit = document.querySelector("#radioFahrenheit")
-var radioKelvin = document.querySelector("#radioKelvin")
+var radioCelsius = document.querySelector("#conversorCelsius")
+var radioFahrenheit = document.querySelector("#conversorFahrenheit")
+var radioKelvin = document.querySelector("#conversorKelvin")
 
-//Input para inserir os valores
-var inputCelsius = document.querySelector("#celsius")
-var inputFahrenheit = document.querySelector("#fahrenheit")
-var inputKelvin = document.querySelector("#kelvin")
+var divCelsius = document.querySelector("#celsius")
+var divFahrenheit = document.querySelector("#fahrenheit")
+var divKelvin = document.querySelector("#kelvin")
 
-//Paragrafo para saida dos resultados
-var resCelsius = document.querySelector("#resCelsius")
-var resFahrenheit = document.querySelector("#resFahrenheit")
-var resKelvin = document.querySelector("#resKelvin")
+if (radioCelsius.checked){
+    conversor()
+}
 
-//Atualiza a div de acordo com os radios selecionados
-function atualizar(){
-    if(radioCelsius.checked){
-        /*inputCelsius.style.display = "initial";
-        inputFahrenheit.style.display = "none";
-        inputKelvin.style.display = "none";
-
-        inputFahrenheit.value = 0
-        inputKelvin.value = 0
-
-        resCelsius.innerHTML = '°C'
-        resFahrenheit.innerHTML = '°F'
-        resKelvin.innerHTML = '°K'*/
-        
-
-    }else if(radioFahrenheit.checked){
-        inputFahrenheit.style.display = "initial";
-        inputCelsius.style.display = "none";
-        inputKelvin.style.display = "none";
-
-        inputCelsius.value = 0
-        inputKelvin.value = 0
-
-        resCelsius.innerHTML = '°C'
-        resFahrenheit.innerHTML = '°F'
-        resKelvin.innerHTML = '°K'
-    }else if(radioKelvin.checked){
-        inputKelvin.style.display = "initial";
-        inputCelsius.style.display = "none";
-        inputFahrenheit.style.display = "none";
-
-        inputCelsius.value = 0
-        inputFahrenheit.value = 0
-
-        resCelsius.innerHTML = '°C'
-        resFahrenheit.innerHTML = '°F'
-        resKelvin.innerHTML = '°K'
+function conversor(){
+    if (radioCelsius.checked){
+        divCelsius.innerHTML = '<input type="number" id="numCelsius"> °C'
+        divFahrenheit.innerHTML = ''
+        divKelvin.innerHTML = ''
+    }else if (radioFahrenheit.checked){
+        divFahrenheit.innerHTML = '<input type="number" id="numFahrenheit"> °F'
+        divCelsius.innerHTML = ''
+        divKelvin.innerHTML = ''
+    }else if (radioKelvin.checked){
+        divKelvin.innerHTML = '<input type="number" id="numKelvin"> °K'
+        divCelsius.innerHTML = ''
+        divFahrenheit.innerHTML = ''
     }
 }
 
-
-/*function converter(){
+function converter(){
     if (radioCelsius.checked){
-        var c = Number(inputCelsius.value)
-        var f = (c * 9/5) + 32
-        var k = c + 273.15
+        var celsius = Number(document.querySelector("#numCelsius").value)
+        var fahrenheit = (celsius * 9/5) + 32
+        var kelvin = celsius + 273.15
 
-        resFahrenheit.innerHTML = `<p>${f} °F</p>`
-        resKelvin.innerHTML = `<p>${k} °K`
+        divFahrenheit.innerHTML = `<p>${celsius}°C é igual a ${fahrenheit}°F</p>`
+        divKelvin.innerHTML = `<p>${celsius}°C é igual a ${kelvin}°K</p>`
+    }else if (radioFahrenheit.checked){
+        var fahrenheit = Number(document.querySelector("#numFahrenheit").value)
+        var celsius = (fahrenheit - 32) * 5/9
+        var kelvin = (fahrenheit - 32) * 5/9 + 273.15
 
-    }else if(radioFahrenheit.checked){
-        var f = Number(inputFahrenheit.value)
-        var c = (f - 32) * 5/9
-        var k = (f - 32) * 5/9 + 273.15
-    }else if(radioCelsius.checked){
-        var k = Number(inputKelvin.Value)
+        divCelsius.innerHTML = `<p>${fahrenheit}°F é igual a ${celsius}°C</p>`
+        divKelvin.innerHTML = `<p>${fahrenheit}°F é igual a ${kelvin}°C</p>`
+    }else if (radioKelvin.checked){
+        var kelvin = Number(document.querySelector("#numKelvin").value)
+        var celsius = kelvin - 273.15
+        var fahrenheit = (kelvin - 273.15) * 9/5 + 32
+
+        divCelsius.innerHTML = `<p>${kelvin}°K é igual a ${celsius.toFixed(2)}°C</p>`
+        divFahrenheit.innerHTML = `<p>${kelvin}°K é igual a ${fahrenheit.toFixed(2)}°F</p>`
     }
-}*/
+}
