@@ -40,7 +40,7 @@ function converter(){
         var kelvin = (fahrenheit - 32) * 5/9 + 273.15
 
         divCelsius.innerHTML = `<p>${fahrenheit.toFixed(2)} °F é igual a ${celsius.toFixed(2)} °C</p>`
-        divKelvin.innerHTML = `<p>${fahrenheit.toFixed(2)} °F é igual a ${kelvin.toFixed(2)} °C</p>`
+        divKelvin.innerHTML = `<p>${fahrenheit.toFixed(2)} °F é igual a ${kelvin.toFixed(2)} °K</p>`
     }else if (radioKelvin.checked){
         var kelvin = Number(document.querySelector("#numKelvin").value)
         var celsius = kelvin - 273.15
